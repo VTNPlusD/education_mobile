@@ -29,6 +29,10 @@ build/
 local.properties
 *.iml
 
+# Visual Studio Code
+#
+.vscode/
+
 # node.js
 #
 node_modules/
@@ -57,3 +61,17 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+# Database
+/android/app/src/main/assets/nest.db
+
+/android/app/release/
+
+# test coverage
+test-coverage/
+
+# gradle properties
+gradle.properties
+
+# file bundle
+index.android.bundle
