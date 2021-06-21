@@ -1,3 +1,3 @@
-import AddIcon from './add.svg';
+import AddIcon from './add.svg'
 
-export {AddIcon};
+export { AddIcon }

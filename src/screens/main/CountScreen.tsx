@@ -1,41 +1,43 @@
-import React, {FC, useEffect} from 'react';
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
-
-import {BaseContainer} from 'components/base';
-import AppStyles from 'styles/AppStyles';
-import {CountScreenNavigationProp, RootStackParamList} from 'navigation/routes';
-import {colors} from 'styles/theme';
-import {useDispatch} from 'react-redux';
-import {apiGetCounts} from 'network/api/countApi';
+import React, { FC, useEffect } from 'react'
+import { StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { BaseContainer } from 'components/base'
+import AppStyles from 'styles/AppStyles'
+import {
+  CountScreenNavigationProp,
+  RootStackParamList
+} from 'navigation/routes'
+import { colors } from 'styles/theme'
+import { useDispatch } from 'react-redux'
+import { apiGetCounts } from 'network/api/countApi'
 
 type Props = {
-  route: keyof RootStackParamList;
-  navigation: CountScreenNavigationProp;
-  count: number;
-  onIncrement: () => void;
-  onDecrement: () => void;
-};
+  route: keyof RootStackParamList
+  navigation: CountScreenNavigationProp
+  count: number
+  onIncrement: () => void
+  onDecrement: () => void
+}
 
-const CountScreen: FC<Props> = props => {
-  const {count, onIncrement, onDecrement} = props;
-  const dispatch = useDispatch();
+const CountScreen: FC<Props> = (props) => {
+  const { count, onIncrement, onDecrement } = props
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    callApiCounts();
-  });
+    callApiCounts()
+  })
 
   const callApiCounts = () => {
     dispatch(apiGetCounts())
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
-  };
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err))
+  }
 
   const _onIncrement = () => {
-    onIncrement();
-  };
+    onIncrement()
+  }
   const _onDecrement = () => {
-    onDecrement();
-  };
+    onDecrement()
+  }
 
   return (
     <BaseContainer styleWrap={styles.styleWrap}>
@@ -51,20 +53,20 @@ const CountScreen: FC<Props> = props => {
         <Text>+</Text>
       </TouchableOpacity>
     </BaseContainer>
-  );
-};
+  )
+}
 
-export default CountScreen;
+export default CountScreen
 
 const styles = StyleSheet.create({
   styleWrap: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   buttonView: {
     margin: 15,
     flex: 1,
-    backgroundColor: colors.downy,
-  },
-});
+    backgroundColor: colors.downy
+  }
+})

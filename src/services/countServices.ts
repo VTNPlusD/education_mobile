@@ -1,3 +1,3 @@
 export const countService = () => {
-  console.log('hehe');
-};
+  console.log('hehe')
+}

@@ -1,2 +1,2 @@
-import TabIcon from './TabIcon';
-export {TabIcon};
+import TabIcon from './TabIcon'
+export { TabIcon }
