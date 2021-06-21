@@ -1,3 +1,3 @@
 export type Count = {
-  count: number;
-};
+  count: number
+}

@@ -1,12 +1,12 @@
-import {Action} from 'redux';
+import { Action } from 'redux'
 
 export interface CountState {
-  count: number;
+  count: number
 }
 
 export enum CountActionTypes {
   INCREMENT = 'INCREMENT',
-  DECREMENT = 'DECREMENT',
+  DECREMENT = 'DECREMENT'
 }
 
 export interface IncrementAction
@@ -15,4 +15,4 @@ export interface IncrementAction
 export interface DecrementAction
   extends Action<typeof CountActionTypes.DECREMENT> {}
 
-export type CountActionType = IncrementAction | DecrementAction;
+export type CountActionType = IncrementAction | DecrementAction

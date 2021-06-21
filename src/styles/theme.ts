@@ -1,7 +1,7 @@
-import normalizeText from './normalizeText';
+import normalizeText from './normalizeText'
 
-export const baseFontSize = 14;
-export const baseSpacing = 16;
+export const baseFontSize = 14
+export const baseSpacing = 16
 
 export const colors = {
   downy: '#61C5CB',
@@ -16,15 +16,15 @@ export const colors = {
   red: '#EB5757',
   provincialPink: '#FDEBE9',
   poloBlue: '#97B3CD',
-  rockBlue05: 'rgba(152, 180, 206, 0.5)',
-};
+  rockBlue05: 'rgba(152, 180, 206, 0.5)'
+}
 
 export const imagesStyle = {
   width: 30,
   height: 30,
   widthSmall: 20,
-  heightSmall: 20,
-};
+  heightSmall: 20
+}
 
 export const fonts = {
   header1: normalizeText(baseFontSize * 3),
@@ -39,13 +39,13 @@ export const fonts = {
   xsmall: normalizeText(baseFontSize * 0.75),
   xxsmall: normalizeText(baseFontSize * 0.5),
   bold: 600,
-  bolder: 800,
-};
+  bolder: 800
+}
 
 export const fontsFamily = {
   Bold: 'NotoSans-Bold',
-  Regular: 'NotoSans-Regular',
-};
+  Regular: 'NotoSans-Regular'
+}
 
 export const spacings = {
   none: 0,
@@ -59,5 +59,5 @@ export const spacings = {
   xLarge: normalizeText(baseSpacing * 2.5),
   xxLarge: normalizeText(baseSpacing * 3),
   xxxLarge: normalizeText(baseSpacing * 3.5),
-  xxxxLarge: normalizeText(baseSpacing * 4),
-};
+  xxxxLarge: normalizeText(baseSpacing * 4)
+}

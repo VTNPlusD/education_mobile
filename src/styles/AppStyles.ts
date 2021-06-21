@@ -1,22 +1,22 @@
-import {StyleSheet} from 'react-native';
-import {colors, fonts, fontsFamily, spacings} from './theme';
+import { StyleSheet } from 'react-native'
+import { colors, fonts, fontsFamily, spacings } from './theme'
 
 const AppStyles = StyleSheet.create({
   baseContainer: {
     flex: 1,
-    backgroundColor: colors.aquaHaze,
+    backgroundColor: colors.aquaHaze
   },
   baseButton: {
     height: 50,
     borderRadius: 6,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   buttonDisable: {
-    backgroundColor: colors.white,
+    backgroundColor: colors.white
   },
   button: {
-    backgroundColor: colors.downy,
+    backgroundColor: colors.downy
   },
   headerTitleStyle: {
     color: colors.downy,
@@ -24,16 +24,16 @@ const AppStyles = StyleSheet.create({
     fontStyle: 'normal',
     fontWeight: 'bold',
     fontSize: fonts.header6,
-    lineHeight: 25,
+    lineHeight: 25
   },
   headerRightButtonStyle: {
     paddingHorizontal: spacings.normal,
-    paddingVertical: spacings.xsmall,
+    paddingVertical: spacings.xsmall
   },
   headerLeftButtonStyle: {
     paddingHorizontal: spacings.normal,
-    paddingVertical: spacings.xsmall,
-  },
-});
+    paddingVertical: spacings.xsmall
+  }
+})
 
-export default AppStyles;
+export default AppStyles

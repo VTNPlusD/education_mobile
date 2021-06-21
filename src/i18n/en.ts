@@ -1,10 +1,10 @@
 export default {
   screen: {
     splash: {
-      content: 'Hello',
+      content: 'Hello'
     },
     count: {
-      something: '',
-    },
-  },
-};
+      something: ''
+    }
+  }
+}
