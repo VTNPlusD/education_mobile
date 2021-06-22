@@ -20,6 +20,7 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+project.xcworkspace
 
 # Android/IntelliJ
 #
@@ -28,10 +29,11 @@ build/
 .gradle
 local.properties
 *.iml
-
+*.hprof
 # Visual Studio Code
 #
 .vscode/
+.history/
 
 # node.js
 #
@@ -43,6 +45,7 @@ yarn-error.log
 buck-out/
 \.buckd/
 *.keystore
+*.jks
 !debug.keystore
 
 # fastlane
@@ -59,19 +62,31 @@ buck-out/
 # Bundle artifact
 *.jsbundle
 
-# CocoaPods
-/ios/Pods/
+# ios
+ios/Pods/
+ios/Podfile.lock
+ios/tmp.xcconfig
 
-# Database
-/android/app/src/main/assets/nest.db
-
+# andriod
+/android/app/src/main/assets/***.db
 /android/app/release/
+gradle.properties
+index.android.bundle
+*.apk
+
+
 
 # test coverage
 test-coverage/
 
-# gradle properties
-gradle.properties
+# env
+.env
+.env.production
+.env.staging
 
-# file bundle
-index.android.bundle
+# google
+google-services.json
+GoogleService-Info.plist
+
+# cache eslint
+.eslintcache

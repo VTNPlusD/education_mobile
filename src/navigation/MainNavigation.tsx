@@ -1,11 +1,11 @@
-import React from 'react'
-import { Platform } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
+import React from 'react'
+import { Platform } from 'react-native'
 
-import countContainer from 'containers/countContainer'
 import { images } from 'assets/images'
 import { TabIcon } from 'components/common'
+import countContainer from 'containers/countContainer'
 import { MainRootStackParamList } from './routes'
 
 const Stack = createStackNavigator<MainRootStackParamList>()
@@ -13,8 +13,8 @@ const Tab = createBottomTabNavigator()
 
 const HomeScreen = () => {
   return (
-    <Stack.Navigator headerMode='none'>
-      <Stack.Screen name='Count' component={countContainer} />
+    <Stack.Navigator headerMode="none">
+      <Stack.Screen name="Count" component={countContainer} />
     </Stack.Navigator>
   )
 }
@@ -22,7 +22,7 @@ const HomeScreen = () => {
 const BottomTabsPhone = () => {
   return (
     <Tab.Navigator
-      initialRouteName='Home'
+      initialRouteName="Home"
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused }) => {
           if (route.name === 'Home') {
@@ -48,7 +48,7 @@ const BottomTabsPhone = () => {
         }
       }}>
       <Tab.Screen
-        name='Home'
+        name="Home"
         component={HomeScreen}
         options={{ tabBarLabel: 'Home' }}
       />
@@ -58,9 +58,9 @@ const BottomTabsPhone = () => {
 
 export default () => {
   return (
-    <Stack.Navigator headerMode='none'>
-      <Stack.Screen name='BottomTab' component={BottomTabsPhone} />
-      <Stack.Screen name='Count' component={countContainer} />
+    <Stack.Navigator headerMode="none">
+      <Stack.Screen name="BottomTab" component={BottomTabsPhone} />
+      <Stack.Screen name="Count" component={countContainer} />
     </Stack.Navigator>
   )
 }

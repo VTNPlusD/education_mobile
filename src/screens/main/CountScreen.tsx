@@ -1,14 +1,14 @@
-import React, { FC, useEffect } from 'react'
-import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { BaseContainer } from 'components/base'
-import AppStyles from 'styles/AppStyles'
 import {
   CountScreenNavigationProp,
   RootStackParamList
 } from 'navigation/routes'
-import { colors } from 'styles/theme'
-import { useDispatch } from 'react-redux'
 import { apiGetCounts } from 'network/api/countApi'
+import React, { useEffect, FC } from 'react'
+import { StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { useDispatch } from 'react-redux'
+import AppStyles from 'styles/AppStyles'
+import { colors } from 'styles/theme'
 
 type Props = {
   route: keyof RootStackParamList
@@ -24,7 +24,7 @@ const CountScreen: FC<Props> = (props) => {
 
   useEffect(() => {
     callApiCounts()
-  })
+  }, [])
 
   const callApiCounts = () => {
     dispatch(apiGetCounts())

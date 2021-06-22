@@ -1,12 +1,12 @@
-import createSagaMiddleware from 'redux-saga'
-import { createStore, applyMiddleware } from 'redux'
-import { apiMiddleware } from 'redux-api-middleware'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import interceptor from 'network/interceptor'
+import { applyMiddleware, createStore } from 'redux'
+import { apiMiddleware } from 'redux-api-middleware'
+import { createTransform, persistReducer, persistStore } from 'redux-persist'
+import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2'
+import createSagaMiddleware from 'redux-saga'
 import rootReducer, { AppState } from 'redux/reducers'
 import rootSaga from 'redux/sagas'
-import AsyncStorage from '@react-native-async-storage/async-storage'
-import { persistStore, persistReducer, createTransform } from 'redux-persist'
-import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2'
 
 const sagaMiddleware = createSagaMiddleware()
 

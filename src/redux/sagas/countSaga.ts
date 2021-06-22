@@ -1,4 +1,4 @@
-import { takeLatest, all } from 'redux-saga/effects'
+import { all, takeLatest } from 'redux-saga/effects'
 import { countService } from 'services/countServices'
 import { CountActionTypes } from 'types/countTypes'
 

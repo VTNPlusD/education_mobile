@@ -1,4 +1,4 @@
-import { CountState, CountActionType, CountActionTypes } from 'types/countTypes'
+import { CountActionType, CountActionTypes, CountState } from 'types/countTypes'
 
 const initialState: CountState = {
   count: 0
