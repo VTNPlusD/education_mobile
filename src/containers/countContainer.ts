@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
+import { onDecrementAction, onIncrementAction } from 'redux/actions/countAction'
 import CountScreen from 'screens/main/CountScreen'
 import { countSelector } from 'selectors/countSelector'
-import { onIncrementAction, onDecrementAction } from 'redux/actions/countAction'
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
   return {

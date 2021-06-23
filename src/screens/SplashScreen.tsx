@@ -1,10 +1,9 @@
-import React from 'react'
-import { useEffect } from 'react'
-import { StyleSheet, View, Image, Text } from 'react-native'
+import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Image, StyleSheet, Text, View } from 'react-native'
 
-import { SplashScreenNavigationProp } from 'navigation/routes'
 import { images } from 'assets/images'
+import { SplashScreenNavigationProp } from 'navigation/routes'
 
 type Props = {
   navigation: SplashScreenNavigationProp
@@ -18,7 +17,7 @@ const SplashScreen: React.FC<Props> = (props) => {
     setTimeout(() => {
       navigation.navigate('Main')
     }, 2000)
-  })
+  }, [])
 
   return (
     <View style={styles.container}>

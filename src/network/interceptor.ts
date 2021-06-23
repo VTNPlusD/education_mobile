@@ -2,9 +2,9 @@
 import { RSAA } from 'redux-api-middleware'
 
 const isFunction = (func: () => void) => typeof func === 'function'
-const isObject = (obj: Object) => typeof obj === 'object'
+const isObject = (obj: any) => typeof obj === 'object'
 const throwError = (name: string, expected: string) => {
-  throw `Expected '${name}' to be ${expected}`
+  throw new Error(`Expected '${name}' to be ${expected}`)
 }
 
 const getHeaders = (headerParams: any, origHeaders = {}, state: any) => {
@@ -76,7 +76,7 @@ export default (configObj: any) =>
           payload: (dispatchedAction: any, _state: any, res: any) => {
             const promise = res.json()
             promise.then((json: any) => {
-              configObj.onRequestSuccess(_state, Object.assign({}, json))
+              configObj.onRequestSuccess(_state, { ...json })
             })
             return promise
           }
@@ -95,19 +95,17 @@ export default (configObj: any) =>
           type: type.type || type,
           meta: type.meta || {},
           payload: (dispatchedAction: any, _state: any, res: any) => {
-            let clonedRes = res.clone()
+            const clonedRes = res.clone()
             let data: any = null
             res.text().then((text: any) => {
               data = JSON.parse(text)
               try {
-                configObj.onRequestError(
-                  _state,
-                  Object.assign(
-                    { status_code: res.status, statusText: data?.title },
-                    JSON.parse(text)
-                  )
-                )
-                var newData = clonedRes
+                configObj.onRequestError(_state, {
+                  status_code: res.status,
+                  statusText: data?.title,
+                  ...JSON.parse(text)
+                })
+                const newData = clonedRes
                 newData.meta = data
                 clonedRes.meta = data
                 clonedRes.statusText = data?.title
@@ -118,11 +116,10 @@ export default (configObj: any) =>
                   is_json: false,
                   raw_res: text
                 })
-                var newData = clonedRes
                 clonedRes.meta = data
               }
             })
-            var newData = clonedRes
+            const newData = clonedRes
             clonedRes.meta = data
             clonedRes.statusText = data?.title
             return newData
