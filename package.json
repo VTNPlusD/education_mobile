@@ -6,7 +6,6 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "format": "prettier --write .",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:eslint:fix": "eslint --ignore-path .gitignore --fix",
@@ -22,7 +21,7 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "prettier --write",
-      "npm run lint:eslint:fix",
+      "yarn lint:eslint:fix",
       "git add --force"
     ],
     "*.{md,json}": [
@@ -31,7 +30,7 @@
     ],
     "*.{ts,tsx}": [
       "prettier --write",
-      "npm run lint:tslint:fix",
+      "yarn lint:tslint:fix",
       "git add --force"
     ],
     "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
@@ -47,9 +46,11 @@
     "react": "17.0.1",
     "react-i18next": "^11.11.0",
     "react-native": "0.64.1",
+    "react-native-extra-dimensions-android": "^1.2.5",
     "react-native-gesture-handler": "^1.9.0",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^3.4.0",
+    "react-native-status-bar-height": "^2.6.0",
     "react-native-svg": "^12.1.1",
     "react-redux": "^7.2.4",
     "redux-api-middleware": "^3.2.1",
@@ -63,6 +64,7 @@
     "@types/lodash": "^4.14.165",
     "@types/react": "^17.0.8",
     "@types/react-native": "^0.64.7",
+    "@types/react-native-extra-dimensions-android": "^1.2.0",
     "@types/react-redux": "^7.1.16",
     "@types/redux-api-middleware": "^3.2.2",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
@@ -70,6 +72,7 @@
     "babel-jest": "^27.0.2",
     "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^7.27.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "husky": "^6.0.0",
     "jest": "^27.0.3",
     "lint-staged": "^11.0.0",

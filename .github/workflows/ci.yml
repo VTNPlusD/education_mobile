@@ -13,17 +13,17 @@ jobs:
     runs-on: ubuntu-latest
     name: Development Distribution
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - uses: actions/setup-node@master
-    - uses: c-hive/gha-yarn-cache@v1
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@master
+      - uses: c-hive/gha-yarn-cache@v1
 
-    - name: Install node modules
-      run: |
-        yarn install
-    - name: test
-      run: |
-        yarn lint-staged -r ../
+      - name: Install node modules
+        run: |
+          yarn install
+      - name: test
+        run: |
+          yarn lint-staged -r ../
     # - name: Cache Gradle Wrapper
     #   uses: actions/cache@v2
     #   with:

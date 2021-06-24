@@ -1,17 +1,17 @@
 import {
-  CountActionTypes,
   DecrementAction,
+  HomeActionTypes,
   IncrementAction
-} from 'types/countTypes'
+} from 'types/HomeTypes'
 
 export const onIncrementAction = (): IncrementAction => {
   return {
-    type: CountActionTypes.INCREMENT
+    type: HomeActionTypes.INCREMENT
   }
 }
 
 export const onDecrementAction = (): DecrementAction => {
   return {
-    type: CountActionTypes.DECREMENT
+    type: HomeActionTypes.DECREMENT
   }
 }

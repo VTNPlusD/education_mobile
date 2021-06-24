@@ -5,7 +5,7 @@ import { Platform } from 'react-native'
 
 import { images } from 'assets/images'
 import { TabIcon } from 'components/common'
-import countContainer from 'containers/countContainer'
+import HomeContainer from 'containers/home'
 import { MainRootStackParamList } from './routes'
 
 const Stack = createStackNavigator<MainRootStackParamList>()
@@ -14,7 +14,7 @@ const Tab = createBottomTabNavigator()
 const HomeScreen = () => {
   return (
     <Stack.Navigator headerMode="none">
-      <Stack.Screen name="Count" component={countContainer} />
+      <Stack.Screen name="Home" component={HomeContainer} />
     </Stack.Navigator>
   )
 }
@@ -60,7 +60,7 @@ export default () => {
   return (
     <Stack.Navigator headerMode="none">
       <Stack.Screen name="BottomTab" component={BottomTabsPhone} />
-      <Stack.Screen name="Count" component={countContainer} />
+      <Stack.Screen name="Home" component={HomeContainer} />
     </Stack.Navigator>
   )
 }

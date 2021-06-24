@@ -3,7 +3,7 @@ export default {
     splash: {
       content: 'Hello'
     },
-    count: {
+    home: {
       something: ''
     }
   }

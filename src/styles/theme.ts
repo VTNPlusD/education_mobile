@@ -20,10 +20,8 @@ export const colors = {
 }
 
 export const imagesStyle = {
-  width: 30,
-  height: 30,
-  widthSmall: 20,
-  heightSmall: 20
+  width: 24,
+  height: 24
 }
 
 export const fonts = {
@@ -43,8 +41,14 @@ export const fonts = {
 }
 
 export const fontsFamily = {
-  Bold: 'NotoSans-Bold',
-  Regular: 'NotoSans-Regular'
+  BoldItalic: 'Segoe-UI-Bold-Italic',
+  Bold: 'Segoe-UI-Bold',
+  Italic: 'Segoe-UI-Italic',
+  LightItalic: 'Segoe-UI-Light-Italic',
+  Light: 'Segoe-UI-Light',
+  Regular: 'Segoe-UI-Regular',
+  SemiBoldItalic: 'Segoe-UI-SemiBold-Italic',
+  SemiBold: 'Segoe-UI-SemiBold'
 }
 
 export const spacings = {

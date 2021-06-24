@@ -20,11 +20,11 @@ export type SplashScreenNavigationProp = StackNavigationProp<
 // Main Stack
 
 export type MainRootStackParamList = {
-  Count: undefined
+  Home: undefined
   BottomTab: undefined
 }
 
-export type CountScreenNavigationProp = StackNavigationProp<
+export type HomeScreenNavigationProp = StackNavigationProp<
   MainRootStackParamList,
-  'Count'
+  'Home'
 >
