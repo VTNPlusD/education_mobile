@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import interceptor from 'network/interceptor'
+import interceptor from 'network/Interceptor'
 import { applyMiddleware, createStore } from 'redux'
 import { apiMiddleware } from 'redux-api-middleware'
 import { createTransform, persistReducer, persistStore } from 'redux-persist'

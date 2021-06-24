@@ -7,7 +7,7 @@ const VITranslate = _.merge(defaultTranslate, {
     splash: {
       content: 'xin chào'
     },
-    count: {
+    home: {
       something: ''
     }
   }

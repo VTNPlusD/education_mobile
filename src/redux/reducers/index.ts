@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux'
-
-import countReducer from './countReducer'
+import HomeReducer from './HomeReducer'
 
 const allReducers = combineReducers({
-  count: countReducer
+  home: HomeReducer
 })
 
 const rootReducer = (state: any, action: any) => {

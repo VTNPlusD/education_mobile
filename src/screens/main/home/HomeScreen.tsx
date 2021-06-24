@@ -1,9 +1,6 @@
 import { BaseContainer } from 'components/base'
-import {
-  CountScreenNavigationProp,
-  RootStackParamList
-} from 'navigation/routes'
-import { apiGetCounts } from 'network/api/countApi'
+import { HomeScreenNavigationProp, RootStackParamList } from 'navigation/routes'
+import { apiGetCounts } from 'network/api/CountApi'
 import React, { useEffect, FC } from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { useDispatch } from 'react-redux'
@@ -12,13 +9,13 @@ import { colors } from 'styles/theme'
 
 type Props = {
   route: keyof RootStackParamList
-  navigation: CountScreenNavigationProp
+  navigation: HomeScreenNavigationProp
   count: number
   onIncrement: () => void
   onDecrement: () => void
 }
 
-const CountScreen: FC<Props> = (props) => {
+const HomeScreen: FC<Props> = (props) => {
   const { count, onIncrement, onDecrement } = props
   const dispatch = useDispatch()
 
@@ -56,7 +53,7 @@ const CountScreen: FC<Props> = (props) => {
   )
 }
 
-export default CountScreen
+export default HomeScreen
 
 const styles = StyleSheet.create({
   styleWrap: {
