@@ -1,4 +1,3 @@
-// 01E2FX5QT2VF0F2Q6GB2TSV0K1
 import { Dimensions } from 'react-native'
 import ExtraDimensions from 'react-native-extra-dimensions-android'
 import { getStatusBarHeight } from 'react-native-status-bar-height'
